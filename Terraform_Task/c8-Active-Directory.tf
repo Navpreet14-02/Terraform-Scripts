@@ -10,7 +10,6 @@ resource "azuread_user" "usera"{
     user_principal_name = "usera@${data.azuread_domains.primaryDomain.domains.0.domain_name}"
     display_name = "usera"
     password = "Cust!2345"
-
 }
 
 resource "azurerm_role_assignment" "roleA"{

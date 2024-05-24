@@ -25,8 +25,6 @@ resource "azurerm_kubernetes_cluster" "aks-cluster" {
     network_plugin = "kubenet"
   }
 
-
-
  
   # azure_active_directory_role_based_access_control {
   #   admin_group_object_ids = [ azuread_group.aks_admins.id ] # This line gives the error 'can't specify admin_group_object_ids when using managed aad rbac (managed = false)'
@@ -34,8 +32,6 @@ resource "azurerm_kubernetes_cluster" "aks-cluster" {
   #   tenant_id = var.ad_tenant_id
     
   # }
-
-
 
   local_account_disabled = true
 

@@ -48,16 +48,3 @@ resource "azurerm_windows_virtual_machine" "vm"{
   }
 }
 
-# resource "azurerm_virtual_machine_extension" "iis_server"{
-#   name = "iis_server_install_script"
-#   virtual_machine_id = azurerm_windows_virtual_machine.vm.id
-#   publisher = "Microsoft.Compute"
-#   type = "CustomScriptExtension"
-#   type_handler_version = "1.9"
-
-#   settings = <<SETTINGS
-#     {
-#       "commandToExecute": "powershell -encodedCommand ${textencodebase64(file("${path.module}/scripts/setup.ps1"), "UTF-16LE")}"
-#     }
-#   SETTINGS
-# }

@@ -13,7 +13,6 @@ resource "azurerm_monitor_diagnostic_setting" "vm-log-settings" {
 
   metric {
     category = "AllMetrics"
-    
   }
 }
 
